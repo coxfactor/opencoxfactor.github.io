@@ -1,27 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>시부렁</title>
+    <title></title>
 </head>
 <body>
-    <h1>문제5. 데이터 입력받아 화면에 출력하기</h1>
+    <h1>문제6. 원하는 버튼을 눌러서 구구단 확인하기</h1>
+    <p>구구단을 보고싶은 번호를 클릭하세요.</p>
     <form method="POST" action="index.php">
-        이름: <input type="text" name="name"/><br/>
-        나이: <input type="number" name="age"/><br/>
-        키: <input type="number" name="height"/><br/>
-        직업: <input type="text" name="job"/><br/>
-        날짜: <input type="date" name="date"/><br/>
-        E-mail: <input type="mail" name="mail"/><br/>
-        <input type="submit" name="submit"/>
-    </form>
-    <h4>입력된 데이터는 아래와 같습니다.</h4>
-    <?php 
-        echo "이름: ".$_POST['name']."<br/>";
-        echo "나이: ".$_POST['age']."<br/>";
-        echo "키: ".$_POST['height']."<br/>";
-        echo "직업: ".$_POST['job'];
-        echo "날짜: ".$_POST['date']."<br/>";
-        echo "E-mail: ".$_POST['mail']."<br/>";
-    ?>
+        <?php 
+            for($i=2;$i<100;$i++){
+                echo "<button type='submit' name='button' value='".$i."'>".$i."단</button>";
+            }
+            echo "</form>";
+            echo "선택한 숫자, ".$_POST['button']."의 구구단은 아래와 같습니다.<br/>";
+            for($i=1;$i<10;$i++){
+                echo $_POST['button']." X ".$i." = ".($_POST['button']*$i)."<br/>";
+            }
+        ?>
 </body>
 </html>
