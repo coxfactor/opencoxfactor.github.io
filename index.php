@@ -9,7 +9,7 @@
     <form method="POST" action="index.php">
         <?php 
             for($i=2;$i<100;$i++){
-                echo "<button type='button' name='button' value='".$i."'>".$i."단</button>";
+                echo "<button type='reset' name='button' value='".$i."'>".$i."단</button>";
             }
             echo "</form>";
             echo "선택한 숫자, ".$_POST['button']."의 구구단은 아래와 같습니다.<br/>";
