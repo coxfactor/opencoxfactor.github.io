@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>시부렁</title>
 </head>
 <body>
     <h1>문제5. 데이터 입력받아 화면에 출력하기</h1>
-    <form method="POST" action="finalPHP1.php">
+    <form method="POST" action="index.php">
         이름: <input type="text" name="name"/><br/>
         나이: <input type="text" name="age"/><br/>
         키: <input type="text" name="height"/><br/>
